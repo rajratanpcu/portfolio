@@ -8,7 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# dist is tracked so GitHub Pages and static drag-and-drop hosts can deploy directly without build step
+!dist
 dist-ssr
 *.local
 
