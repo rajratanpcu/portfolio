@@ -1,0 +1,222 @@
+import { Skill, SkillCategory } from '../types';
+
+export const skillCategories: SkillCategory[] = [
+  {
+    id: 'languages',
+    name: 'Languages & Core CS',
+    description: 'Core languages and foundational CS principles for backend engineering.',
+    icon: 'code',
+  },
+  {
+    id: 'backend',
+    name: 'Backend & Web',
+    description: 'Server frameworks, security tokens, and responsive web design.',
+    icon: 'server',
+  },
+  {
+    id: 'databases',
+    name: 'Databases & Storage',
+    description: 'Relational data modeling, querying, and transactional integrity.',
+    icon: 'database',
+  },
+  {
+    id: 'tools-devops',
+    name: 'Tools & DevOps',
+    description: 'Containerization, cloud persistence, and version control.',
+    icon: 'terminal',
+  },
+  {
+    id: 'ai-automation',
+    name: 'AI & Automation',
+    description: 'Applied Generative AI, RAG pipelines, n8n, and agentic coding toolchains.',
+    icon: 'sparkles',
+  },
+];
+
+export const skillsData: Skill[] = [
+  // Languages & Core CS
+  {
+    name: 'Java',
+    category: 'languages',
+    proficiency: 'Core',
+    icon: 'java',
+    description: 'Primary backend language; Object-Oriented design, collections, multi-threading, Spring Boot integration.',
+    tags: ['Backend', 'Enterprise', 'OOP', 'Spring'],
+  },
+  {
+    name: 'C',
+    category: 'languages',
+    proficiency: 'Core',
+    icon: 'c',
+    description: 'Low-level systems programming, memory allocation, pointers, and foundational computer architecture.',
+    tags: ['Systems', 'Core CS'],
+  },
+  {
+    name: 'C++',
+    category: 'languages',
+    proficiency: 'Core',
+    icon: 'cpp',
+    description: 'Data structures, algorithm implementations, competitive programming, memory awareness.',
+    tags: ['DSA', 'Algorithms', 'Performance'],
+  },
+  {
+    name: 'Data Structures & Algorithms (DSA)',
+    category: 'languages',
+    proficiency: 'Core',
+    icon: 'dsa',
+    description: 'Trees, graphs, dynamic programming, sorting/searching; actively practiced on LeetCode.',
+    tags: ['Problem Solving', 'Complexity Analysis'],
+  },
+  {
+    name: 'Object-Oriented Programming (OOP)',
+    category: 'languages',
+    proficiency: 'Core',
+    icon: 'oop',
+    description: 'Encapsulation, inheritance, polymorphism, SOLID principles, design patterns.',
+    tags: ['Architecture', 'Clean Code'],
+  },
+  {
+    name: 'DBMS (Database Management Systems)',
+    category: 'languages',
+    proficiency: 'Core',
+    icon: 'dbms',
+    description: 'Relational algebra, normalization (1NF-BCNF), ACID properties, and transaction management.',
+    tags: ['Relational Data', 'Transactions'],
+  },
+
+  // Backend & Web
+  {
+    name: 'Spring Boot',
+    category: 'backend',
+    proficiency: 'Core',
+    icon: 'spring',
+    description: 'REST controller architecture, dependency injection, JPA repository mapping, service layer design.',
+    tags: ['Java', 'Microservices', 'REST APIs'],
+  },
+  {
+    name: 'JWT (JSON Web Token) Auth',
+    category: 'backend',
+    proficiency: 'Core',
+    icon: 'jwt',
+    description: 'Stateless user authentication, token generation, cryptographic verification, and security filters.',
+    tags: ['Security', 'Authentication', 'APIs'],
+  },
+  {
+    name: 'RESTful APIs',
+    category: 'backend',
+    proficiency: 'Core',
+    icon: 'api',
+    description: 'HTTP verb semantics, JSON data contracts, error payloads, and integration design.',
+    tags: ['HTTP', 'Contracts', 'Integration'],
+  },
+  {
+    name: 'HTML5 & CSS3',
+    category: 'backend',
+    proficiency: 'Comfortable',
+    icon: 'html',
+    description: 'Responsive layouts, modern web styling, UI markup, accessibility.',
+    tags: ['Web Standards', 'Styling'],
+  },
+
+  // Databases
+  {
+    name: 'MySQL',
+    category: 'databases',
+    proficiency: 'Core',
+    icon: 'mysql',
+    description: 'Relational schemas, query optimization, foreign key constraints, indexing, transactions.',
+    tags: ['RDBMS', 'SQL', 'Production'],
+  },
+  {
+    name: 'PostgreSQL',
+    category: 'databases',
+    proficiency: 'Comfortable',
+    icon: 'postgresql',
+    description: 'Complex joins, relational schema design, enterprise migrations, and ACID compliance.',
+    tags: ['RDBMS', 'SQL'],
+  },
+
+  // Tools & DevOps
+  {
+    name: 'Git & GitHub',
+    category: 'tools-devops',
+    proficiency: 'Core',
+    icon: 'github',
+    description: 'Branching workflows, commits, pull requests, issue tracking, and collaborative open source.',
+    tags: ['VCS', 'Collaboration'],
+  },
+  {
+    name: 'Docker',
+    category: 'tools-devops',
+    proficiency: 'Comfortable',
+    icon: 'docker',
+    description: 'Containerization, Dockerfile authoring, multi-container Compose setup, isolated runtimes.',
+    tags: ['Containers', 'DevOps', 'Deployment'],
+  },
+  {
+    name: 'Firebase',
+    category: 'tools-devops',
+    proficiency: 'Comfortable',
+    icon: 'firebase',
+    description: 'Backend-as-a-service, real-time database, cloud hosting, and authentication hooks.',
+    tags: ['BaaS', 'Cloud'],
+  },
+  {
+    name: 'VS Code',
+    category: 'tools-devops',
+    proficiency: 'Core',
+    icon: 'vscode',
+    description: 'Configured development environment with Java language support, debugging, and extensions.',
+    tags: ['IDE', 'Productivity'],
+  },
+
+  // AI & Automation
+  {
+    name: 'Generative AI & LLMs',
+    category: 'ai-automation',
+    proficiency: 'Core',
+    icon: 'ai',
+    description: 'Applied LLM systems, prompt engineering, structured outputs, multi-agent workflows.',
+    tags: ['LLM', 'AI Systems'],
+  },
+  {
+    name: 'RAG (Retrieval-Augmented Gen)',
+    category: 'ai-automation',
+    proficiency: 'Core',
+    icon: 'rag',
+    description: 'Vector embeddings, semantic search, document ingestion chunking, contextual grounding.',
+    tags: ['Information Retrieval', 'Embeddings'],
+  },
+  {
+    name: 'AI Chatbots',
+    category: 'ai-automation',
+    proficiency: 'Core',
+    icon: 'chatbot',
+    description: 'Conversational agent architecture, state management, tool-calling loops, and API connections.',
+    tags: ['Conversational AI', 'Agents'],
+  },
+  {
+    name: 'Vibe Coding',
+    category: 'ai-automation',
+    proficiency: 'Core',
+    icon: 'sparkles',
+    description: 'Iterative, AI-augmented rapid prototyping and production code synthesis.',
+    tags: ['AI Tooling', 'Speed'],
+  },
+  {
+    name: 'n8n',
+    category: 'ai-automation',
+    proficiency: 'Comfortable',
+    icon: 'n8n',
+    description: 'Self-hosted workflow automation, webhook endpoints, multi-step business logic triggers.',
+    tags: ['Automation', 'Workflows', 'Low-Code'],
+  },
+  {
+    name: 'Claude Code',
+    category: 'ai-automation',
+    proficiency: 'Core',
+    icon: 'claude',
+    description: 'Advanced command-line agentic developer workflows, test automation, and code refactoring.',
+    tags: ['Agentic Workflows', 'Developer Tools'],
+  },
+];
