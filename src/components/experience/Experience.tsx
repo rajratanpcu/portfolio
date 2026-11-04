@@ -103,12 +103,8 @@ export const Experience: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Entrance animation delay based on index */}
-                <style jsx>{`
-                  .experience-item-${index} {
-                    animation-delay: ${index * 100}ms;
-                  }
-                `}</style>
+                {/* Entrance animation delay via inline style */}
+                <div style={{ animationDelay: `${index * 100}ms` }} className="animate-in" aria-hidden="true" />
               </div>
             </div>
           ))}

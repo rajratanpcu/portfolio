@@ -129,7 +129,6 @@ export const Contact: React.FC = () => {
                     target={link.external ? '_blank' : undefined}
                     rel={link.external ? 'noopener noreferrer' : undefined}
                     className="flex items-start gap-3 p-4 rounded-xl bg-slate-950/60 border border-slate-800/60 hover:border-current/40 hover:bg-slate-950 transition-all duration-300 group"
-                    style={{ '--tw-border-opacity': '0.4' } as React.CSSProperties}
                   >
                     <div className={`p-2.5 rounded-lg bg-${link.color}-500/10 text-${link.color}-400 group-hover:bg-${link.color}-500 group-hover:text-slate-950 transition-colors duration-300 shrink-0`}>
                       <link.icon className="w-5 h-5" />

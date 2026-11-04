@@ -12,6 +12,11 @@ declare module 'react' {
 
   export type ComponentType<P = {}> = ((props: P) => any) | (new (props: P) => Component<any, any>);
 
+  export interface CSSProperties {
+    [key: `--${string}`]: string | number;
+    [key: string]: string | number | undefined;
+  }
+
   export interface FC<P = {}> {
     (props: P & { key?: any }): any;
   }
