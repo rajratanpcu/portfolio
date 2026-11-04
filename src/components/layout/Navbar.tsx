@@ -54,33 +54,34 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/20 py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/30 py-3'
+          : 'bg-slate-950/40 backdrop-blur-sm border-b border-slate-800/40 py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo / Brand */}
+          {/* Logo / Brand - refined */}
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-2.5 group"
+            aria-label="Go to homepage"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform duration-200">
               RR
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-slate-100 text-base tracking-tight group-hover:text-sky-400 transition-colors">
+              <span className="font-bold text-slate-100 text-base tracking-tight group-hover:text-sky-400 transition-colors duration-200">
                 {profileData.name}
               </span>
               <span className="text-[11px] text-slate-400 font-mono tracking-tight -mt-1">
-                Portfolio // PCU Pune
+                B.Tech CSE • PCU Pune
               </span>
             </div>
           </a>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          {/* Desktop Navigation Links - improved active state and accessibility */}
+          <nav className="hidden lg:flex items-center space-x-0.5" aria-label="Main navigation">
             {NAV_LINKS.map((link) => {
               const sectionId = link.href.replace('#', '');
               const isActive = activeSection === sectionId;
@@ -89,13 +90,17 @@ export const Navbar: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`px-3 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all ${
+                  className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 relative ${
                     isActive
                       ? 'text-sky-400 bg-sky-500/10'
                       : 'text-slate-300 hover:text-white hover:bg-slate-900/60'
                   }`}
+                  aria-current={isActive ? 'page' : undefined}
                 >
                   {link.label}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-sky-400 rounded-full" aria-hidden="true" />
+                  )}
                 </a>
               );
             })}
@@ -114,12 +119,14 @@ export const Navbar: React.FC = () => {
             </Button>
           </div>
 
-          {/* Mobile menu toggle */}
+          {/* Mobile menu toggle - improved accessibility */}
           <div className="flex lg:hidden items-center gap-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
-              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              className="p-2.5 text-slate-400 hover:text-white rounded-xl hover:bg-slate-900/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 transition-all duration-200"
+              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {mobileMenuOpen ? <Icons.X className="w-6 h-6" /> : <Icons.Menu className="w-6 h-6" />}
             </button>
@@ -127,14 +134,19 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Dropdown - improved animation and accessibility */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950/95 border-b border-slate-800 backdrop-blur-xl px-4 pt-3 pb-6 animate-in slide-in-from-top-4 duration-200">
+        <div
+          id="mobile-navigation"
+          className="lg:hidden bg-slate-950/98 border-b border-slate-800 backdrop-blur-xl px-4 pt-3 pb-6 animate-in slide-in-from-top-4 duration-200"
+          role="navigation"
+          aria-label="Mobile navigation"
+        >
           <nav className="flex flex-col space-y-1">
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900"
+              className="px-4 py-3 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/80 transition-colors duration-200"
             >
               Home
             </a>
@@ -143,7 +155,7 @@ export const Navbar: React.FC = () => {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900"
+                className="px-4 py-3 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-900/80 transition-colors duration-200"
               >
                 {link.label}
               </a>

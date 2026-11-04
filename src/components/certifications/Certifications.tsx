@@ -12,22 +12,22 @@ export const Certifications: React.FC = () => {
   return (
     <section id="certifications" className="py-20 border-t border-slate-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mb-10">
+        {/* Section Header - refined */}
+        <div className="mb-12 animate-in fade-in duration-200">
           <Badge variant="cyan" size="sm" icon={<Icons.Award className="w-3.5 h-3.5" />}>
             Industry Credentials
           </Badge>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-snug">
             Certifications
           </h2>
-          <p className="mt-2 text-base text-slate-400 max-w-2xl">
+          <p className="mt-3 text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed">
             Verified credentials in cloud infrastructure and artificial intelligence foundations.
           </p>
         </div>
 
-        {/* Certifications Grid */}
+        {/* Certifications Grid - improved spacing */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certificationsData.map((cert) => (
+          {certificationsData.map((cert, index) => (
             <CertificateCard
               key={cert.id}
               certification={cert}

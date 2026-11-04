@@ -1,0 +1,43 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0e1526"/>
+  <rect x="50" y="50" width="700" height="500" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="400" y="100" font-family="monospace" font-size="16" fill="#818cf8" text-anchor="middle">Medical RAG Pipeline Architecture</text>
+  <rect x="80" y="130" width="140" height="80" rx="4" fill="#070b14" stroke="#38bdf8" stroke-width="2"/>
+  <text x="150" y="155" font-family="monospace" font-size="11" fill="#38bdf8" text-anchor="middle">Medical Corpus</text>
+  <text x="150" y="175" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">PubMed, Guidelines,</text>
+  <text x="150" y="195" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Drug DBs</text>
+  <line x1="220" y1="170" x2="260" y2="170" stroke="#38bdf8" stroke-width="2" marker-end="url(#a1)"/>
+  <rect x="260" y="130" width="140" height="80" rx="4" fill="#070b14" stroke="#818cf8" stroke-width="2"/>
+  <text x="330" y="155" font-family="monospace" font-size="11" fill="#818cf8" text-anchor="middle">Chunking &</text>
+  <text x="330" y="175" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Embedding</text>
+  <text x="330" y="195" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">BioBERT / ClinicalBERT</text>
+  <line x1="400" y1="170" x2="440" y2="170" stroke="#818cf8" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="440" y="130" width="140" height="80" rx="4" fill="#070b14" stroke="#34d399" stroke-width="2"/>
+  <text x="510" y="155" font-family="monospace" font-size="11" fill="#34d399" text-anchor="middle">Vector Index</text>
+  <text x="510" y="175" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">FAISS / HNSW +</text>
+  <text x="510" y="195" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">pgvector</text>
+  <line x1="580" y1="170" x2="620" y2="170" stroke="#34d399" stroke-width="2" marker-end="url(#a3)"/>
+  <rect x="620" y="130" width="100" height="80" rx="4" fill="#070b14" stroke="#fbbf24" stroke-width="2"/>
+  <text x="670" y="155" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">Hybrid</text>
+  <text x="670" y="175" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Dense + Sparse</text>
+  <text x="670" y="195" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">BM25 RRF</text>
+  <!-- Query flow -->
+  <rect x="300" y="250" width="200" height="60" rx="4" fill="#070b14" stroke="#a855f7" stroke-width="2"/>
+  <text x="400" y="275" font-family="monospace" font-size="11" fill="#a855f7" text-anchor="middle">Clinical Query</text>
+  <text x="400" y="295" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">+ Patient Context</text>
+  <line x1="400" y1="310" x2="400" y2="350" stroke="#a855f7" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="300" y="350" width="200" height="60" rx="4" fill="#070b14" stroke="#fbbf24" stroke-width="2"/>
+  <text x="400" y="375" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">Cross-Encoder</text>
+  <text x="400" y="395" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Rerank Top-K</text>
+  <line x1="400" y1="410" x2="400" y2="450" stroke="#fbbf24" stroke-width="2" marker-end="url(#a5)"/>
+  <rect x="250" y="450" width="300" height="60" rx="4" fill="#070b14" stroke="#34d399" stroke-width="2"/>
+  <text x="400" y="475" font-family="monospace" font-size="11" fill="#34d399" text-anchor="middle">Grounded Generation</text>
+  <text x="400" y="495" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Citations + Safety Layer</text>
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#38bdf8"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#818cf8"/></marker>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#34d399"/></marker>
+    <marker id="a4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#a855f7"/></marker>
+    <marker id="a5" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#fbbf24"/></marker>
+  </defs>
+</svg>

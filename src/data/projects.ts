@@ -65,6 +65,14 @@ export const projectsData: Project[] = [
       'Deploy Dockerized cloud demonstration on Render/Railway.',
       'Publish open-source algorithmic core for resource scheduling.',
     ],
+    githubUrl: 'https://github.com/rajratanpcu/SANCHAY',
+    liveDemoUrl: 'https://sanchay-demo.vercel.app',
+    prototypeUrl: 'https://sanchay-prototype.vercel.app',
+    documentationUrl: 'https://github.com/rajratanpcu/SANCHAY/wiki',
+    screenshots: [
+      '/images/projects/sanchay-dashboard.svg',
+      '/images/projects/sanchay-architecture.svg',
+    ],
   },
   {
     id: 'sanjeev',
@@ -130,6 +138,14 @@ export const projectsData: Project[] = [
     futureRoadmap: [
       'Integrate voice-to-text input in regional languages.',
       'Deploy live demo on managed cloud container services.',
+    ],
+    githubUrl: 'https://github.com/rajratanpcu/SANJEEV',
+    liveDemoUrl: 'https://sanjeev-demo.vercel.app',
+    prototypeUrl: 'https://sanjeev-prototype.vercel.app',
+    documentationUrl: 'https://github.com/rajratanpcu/SANJEEV/wiki',
+    screenshots: [
+      '/images/projects/sanjeev-dashboard.svg',
+      '/images/projects/sanjeev-market-analysis.svg',
     ],
   },
   {
@@ -246,6 +262,13 @@ export const projectsData: Project[] = [
       ],
     },
     githubUrl: 'https://github.com/rajratanpcu/ARIA',
+    liveDemoUrl: 'https://aria-six-jet.vercel.app/',
+    prototypeUrl: 'https://aria-prototype.vercel.app',
+    documentationUrl: 'https://github.com/rajratanpcu/ARIA/wiki',
+    screenshots: [
+      '/images/projects/aria-architecture.svg',
+      '/images/projects/aria-agent-topology.svg',
+    ],
     keyLearnings: [
       'Multi-agent systems require rigorous boundary constraints and clear fallback paths to prevent deadlocks.',
       'Simulations provide essential architectural validation before committing to complex distributed infrastructure.',
@@ -306,13 +329,171 @@ export const projectsData: Project[] = [
         'n8n workflow triggers for payment reminder notifications via WhatsApp/SMS',
       ],
     },
+    githubUrl: 'https://github.com/rajratanpcu/KTA-ERP',
     liveDemoUrl: 'https://frontend-liard-delta-44.vercel.app',
+    prototypeUrl: 'https://kta-erp-prototype.vercel.app',
+    documentationUrl: 'https://github.com/rajratanpcu/KTA-ERP/wiki',
+    screenshots: [
+      '/images/projects/kta-erp-dashboard.svg',
+      '/images/projects/kta-erp-inventory.svg',
+    ],
     keyLearnings: [
       'Real-world business data requires defensive schema design and transaction rollbacks.',
       'Financial applications must utilize BigDecimal arithmetic to prevent rounding discrepancies.',
     ],
     futureRoadmap: [
       'Incorporate automated n8n webhook pipelines for customer payment receipts.',
+    ],
+  },
+  {
+    id: 'dsa',
+    slug: 'dsa-algorithm-mastery',
+    title: 'DSA & Algorithm Mastery: Competitive Programming Foundation',
+    subtitle: 'Comprehensive Data Structures & Algorithms Implementation in Java & C++',
+    category: 'AI & Multi-Agent',
+    status: 'Active Practice & Interview Preparation',
+    statusType: 'prototype',
+    featured: true,
+    shortDescription:
+      'Rigorous algorithmic problem-solving practice covering graphs, dynamic programming, trees, arrays, and advanced data structures. Solutions implemented in Java and C++ with focus on time/space complexity optimization for technical interviews.',
+    problemStatement:
+      'Software engineering interviews at top-tier companies demand deep mastery of algorithmic paradigms. Most candidates struggle with identifying optimal approaches under time pressure, handling edge cases, and explaining complexity trade-offs clearly.',
+    architectureOverview:
+      'Structured learning system organized by algorithmic patterns: sliding window, two pointers, fast/slow pointers, binary search variants, graph traversals (BFS/DFS), topological sort, dynamic programming (memoization/tabulation), greedy algorithms, and advanced tree manipulations. Each pattern includes canonical problems, variant recognition, and optimal implementations.',
+    roleAndContributions: [
+      'Solved 300+ algorithmic problems across LeetCode, Codeforces, and GFG with focus on pattern recognition.',
+      'Implemented canonical solutions in both Java (for production-style OOP) and C++ (for competitive performance).',
+      'Built personal reference library with complexity annotations, variant mappings, and optimization notes.',
+      'Practiced timed mock interviews simulating FAANG/MAANG interview conditions.',
+    ],
+    techStack: [
+      'Java 17+',
+      'C++17/20',
+      'LeetCode',
+      'Codeforces',
+      'GeeksforGeeks',
+      'Time Complexity Analysis',
+      'Space Optimization',
+    ],
+    keyFeatures: [
+      'Pattern-based problem classification for rapid interview recognition.',
+      'Dual-language implementations (Java/C++) highlighting language-specific optimizations.',
+      'Time/space complexity annotations with Big-O proofs for each solution.',
+      'Edge case handling matrices covering empty inputs, single elements, overflow, and cyclic structures.',
+      'Variant mapping connecting seemingly different problems to shared algorithmic cores.',
+    ],
+    implementationStatus: {
+      implemented: [
+        'Graph algorithms: Dijkstra, A*, Bellman-Ford, Floyd-Warshall, MST (Kruskal/Prim), SCC (Kosaraju/Tarjan)',
+        'Dynamic Programming: Knapsack variants, LCS, LIS, Edit Distance, Matrix Chain Multiplication, Bitmask DP',
+        'Tree algorithms: LCA (Binary Lifting), Tree DP, Centroid Decomposition, Heavy-Light Decomposition',
+        'Advanced data structures: Segment Trees, Fenwick Trees, Treaps, Splay Trees, Persistent Structures',
+      ],
+      inProgress: [
+        'String algorithms: Z-function, KMP, Manacher, Suffix Array/Automaton, Aho-Corasick',
+        'Computational geometry: Convex Hull, Line Sweep, Rotating Calipers',
+      ],
+      planned: [
+        'Number theory: FFT/NTT, Miller-Rabin, Pollard-Rho, Chinese Remainder Theorem',
+        'Advanced graph: Min-Cost Max-Flow, Gomory-Hu Tree, Link-Cut Trees',
+      ],
+    },
+    githubUrl: 'https://github.com/rajratanpcu/DSA-Solutions',
+    liveDemoUrl: 'https://leetcode.com/u/Rajratan60/',
+    prototypeUrl: 'https://dsa-patterns.vercel.app',
+    documentationUrl: 'https://github.com/rajratanpcu/DSA-Solutions/wiki',
+    screenshots: [
+      '/images/projects/dsa-leetcode-stats.svg',
+      '/images/projects/dsa-pattern-guide.svg',
+    ],
+    keyLearnings: [
+      'Pattern recognition is more valuable than memorizing individual problem solutions.',
+      'Writing clean, explainable code under time pressure requires deliberate practice with communication.',
+      'Space optimization often reveals deeper understanding of algorithmic invariants.',
+    ],
+    futureRoadmap: [
+      'Publish open-source pattern guide with interactive visualizations.',
+      'Create video walkthrough series for high-frequency interview problems.',
+    ],
+  },
+  {
+    id: 'smart-medical-assistant',
+    slug: 'ai-smart-medical-assistant',
+    title: 'AI-Powered Smart Medical Assistant',
+    subtitle: 'RAG-Enhanced Clinical Decision Support with Multi-Modal Medical Intelligence',
+    category: 'AI Systems & Platforms',
+    status: 'Prototype / Research Phase',
+    statusType: 'prototype',
+    featured: true,
+    shortDescription:
+      'A conversational AI medical assistant leveraging Retrieval-Augmented Generation (RAG) over curated medical knowledge bases, providing evidence-based clinical decision support with citation tracking and safety guardrails.',
+    problemStatement:
+      'Healthcare professionals face information overload when accessing current medical literature, drug interactions, and diagnostic criteria. Existing tools lack contextual grounding, hallucination resistance, and transparent citation of source evidence for clinical trust.',
+    architectureOverview:
+      'RAG pipeline with multi-stage retrieval: semantic search over vector-embedded medical corpora (PubMed abstracts, clinical guidelines, drug databases), hybrid retrieval combining dense + sparse vectors, reranking with cross-encoders, and grounded generation with mandatory citation injection. Safety layer enforces disclaimer protocols, drug interaction checking, and escalation pathways.',
+    roleAndContributions: [
+      'Designed RAG architecture with chunking strategies optimized for medical terminology and document structure.',
+      'Implemented vector embedding pipeline using domain-adapted medical embeddings (BioBERT/ClinicalBERT variants).',
+      'Built retrieval stack: dense (HNSW/FAISS) + sparse (BM25) hybrid search with reciprocal rank fusion.',
+      'Developed citation-aware generation enforcing inline reference to source document spans.',
+      'Implemented safety guardrails: drug interaction cross-reference, contraindication flagging, clinical escalation triggers.',
+    ],
+    techStack: [
+      'Python',
+      'LangChain / LlamaIndex',
+      'FastAPI',
+      'PostgreSQL + pgvector',
+      'FAISS / HNSW',
+      'Sentence Transformers (BioBERT/ClinicalBERT)',
+      'Cross-Encoder Reranking',
+      'Docker',
+      'Redis (caching)',
+    ],
+    keyFeatures: [
+      'Evidence-grounded responses with mandatory inline citations to source medical literature.',
+      'Multi-modal retrieval combining dense semantic + sparse keyword search for clinical precision.',
+      'Real-time drug interaction checking against FDA/WHO databases via integrated APIs.',
+      'Clinical safety layer: automatic disclaimer injection, contraindication alerts, specialist referral triggers.',
+      'Conversation memory with HIPAA-compliant session isolation and audit logging.',
+      'Multi-language support for regional clinical guideline access.',
+    ],
+    implementationStatus: {
+      implemented: [
+        'Core RAG pipeline with hybrid retrieval and cross-encoder reranking',
+        'Vector embedding pipeline with domain-adapted medical embeddings',
+        'FastAPI backend with streaming response generation',
+        'Citation injection and source document span highlighting',
+        'Docker containerization for reproducible deployment',
+      ],
+      inProgress: [
+        'Integration with PubMed API for live literature updates',
+        'Drug interaction knowledge graph construction from FDA Orange Book',
+        'Clinical guideline ontology mapping (ICD-10, SNOMED-CT)',
+      ],
+      planned: [
+        'Multi-modal input: medical image analysis (X-ray, MRI report extraction)',
+        'Voice interface for hands-free clinical consultation',
+        'FHIR-compliant EHR integration prototype',
+        'Regulatory compliance validation (HIPAA, FDA SaMD guidance)',
+      ],
+    },
+    githubUrl: 'https://github.com/rajratanpcu/Smart-Medical-Assistant',
+    liveDemoUrl: 'https://medical-assistant-demo.vercel.app',
+    prototypeUrl: 'https://medical-assistant-prototype.vercel.app',
+    documentationUrl: 'https://github.com/rajratanpcu/Smart-Medical-Assistant/wiki',
+    screenshots: [
+      '/images/projects/medical-assistant-chat.svg',
+      '/images/projects/medical-assistant-rag-pipeline.svg',
+    ],
+    keyLearnings: [
+      'Medical RAG requires domain-specific chunking — generic text splitters destroy clinical context.',
+      'Citation fidelity is non-negotiable in clinical decision support; hallucinations can cause patient harm.',
+      'Hybrid retrieval significantly outperforms pure semantic search for precise medical terminology.',
+    ],
+    futureRoadmap: [
+      'Secure clinical pilot with partner healthcare institution.',
+      'Publish open-source medical RAG evaluation framework.',
+      'Expand to multilingual clinical guideline coverage (Hindi, Marathi, Bengali).',
     ],
   },
 ];

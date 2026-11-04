@@ -1,0 +1,20 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0e1526"/>
+  <rect x="50" y="50" width="700" height="500" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="400" y="100" font-family="monospace" font-size="16" fill="#fbbf24" text-anchor="middle">DSA & Algorithm Mastery</text>
+  <rect x="80" y="120" width="200" height="100" rx="4" fill="#070b14" stroke="#1e293b"/>
+  <text x="180" y="150" font-family="monospace" font-size="11" fill="#38bdf8" text-anchor="middle">Problems Solved</text>
+  <text x="180" y="180" font-family="monospace" font-size="24" fill="#fbbf24" font-weight="bold" text-anchor="middle">300+</text>
+  <rect x="300" y="120" width="200" height="100" rx="4" fill="#070b14" stroke="#1e293b"/>
+  <text x="400" y="150" font-family="monospace" font-size="11" fill="#818cf8" text-anchor="middle">Languages</text>
+  <text x="400" y="180" font-family="monospace" font-size="18" fill="#818cf8" font-weight="bold" text-anchor="middle">Java / C++</text>
+  <rect x="520" y="120" width="200" height="100" rx="4" fill="#070b14" stroke="#1e293b"/>
+  <text x="620" y="150" font-family="monospace" font-size="11" fill="#34d399" text-anchor="middle">Patterns Mastered</text>
+  <text x="620" y="180" font-family="monospace" font-size="18" fill="#34d399" font-weight="bold" text-anchor="middle">25+</text>
+  <rect x="80" y="240" width="640" height="280" rx="4" fill="#070b14" stroke="#1e293b"/>
+  <text x="400" y="275" font-family="monospace" font-size="14" fill="#94a3b8" text-anchor="middle">Algorithmic Pattern Coverage</text>
+  <text x="400" y="320" font-family="monospace" font-size="11" fill="#64748b" text-anchor="middle">Graph: Dijkstra, A*, Bellman-Ford, Floyd-Warshall, MST, SCC</text>
+  <text x="400" y="345" font-family="monospace" font-size="11" fill="#64748b" text-anchor="middle">DP: Knapsack, LCS, LIS, Edit Distance, Matrix Chain, Bitmask</text>
+  <text x="400" y="370" font-family="monospace" font-size="11" fill="#64748b" text-anchor="middle">Trees: LCA, Tree DP, Centroid Decomp, Heavy-Light</text>
+  <text x="400" y="395" font-family="monospace" font-size="11" fill="#64748b" text-anchor="middle">Advanced DS: Segment Trees, Fenwick, Treaps, Persistent</text>
+</svg>

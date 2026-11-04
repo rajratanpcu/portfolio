@@ -4,10 +4,11 @@ import { Hero } from './components/hero/Hero';
 import { About } from './components/about/About';
 import { Skills } from './components/skills/Skills';
 import { Projects } from './components/projects/Projects';
+import { AriaFlagshipSection } from './components/projects/AriaFlagshipSection';
 import { Experience } from './components/experience/Experience';
 import { Certifications } from './components/certifications/Certifications';
 import { Achievements } from './components/achievements/Achievements';
-import { Activity } from './components/activity/Activity';
+import { Activities } from './components/activities/Activities';
 import { Resume } from './components/resume/Resume';
 import { Contact } from './components/contact/Contact';
 import { Footer } from './components/layout/Footer';
@@ -26,11 +27,12 @@ export const App: React.FC = () => {
         <Hero />
         <About />
         <Skills />
+        <AriaFlagshipSection />
         <Projects />
         <Experience />
         <Certifications />
         <Achievements />
-        <Activity />
+        <Activities />
         <Resume />
         <Contact />
       </main>

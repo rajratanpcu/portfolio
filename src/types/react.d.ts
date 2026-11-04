@@ -10,6 +10,8 @@ declare module 'react' {
 
   export class Component<P = {}, S = {}> {}
 
+  export type ComponentType<P = {}> = ((props: P) => any) | (new (props: P) => Component<any, any>);
+
   export interface FC<P = {}> {
     (props: P & { key?: any }): any;
   }

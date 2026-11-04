@@ -93,6 +93,9 @@ export interface Project {
   };
   githubUrl?: string;
   liveDemoUrl?: string;
+  prototypeUrl?: string;
+  documentationUrl?: string;
+  screenshots?: string[];
   keyLearnings: string[];
   futureRoadmap: string[];
 }

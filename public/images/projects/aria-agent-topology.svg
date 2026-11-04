@@ -1,0 +1,37 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0e1526"/>
+  <rect x="50" y="50" width="700" height="500" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="400" y="100" font-family="monospace" font-size="16" fill="#a855f7" text-anchor="middle">ARIA Agent Interaction Flow</text>
+  <rect x="80" y="140" width="140" height="90" rx="6" fill="#070b14" stroke="#34d399" stroke-width="2"/>
+  <text x="150" y="165" font-family="monospace" font-size="11" fill="#34d399" text-anchor="middle">BIA</text>
+  <text x="150" y="185" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Build Risk Score</text>
+  <text x="150" y="205" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Code Delta Analysis</text>
+  <line x1="220" y1="185" x2="260" y2="185" stroke="#34d399" stroke-width="2" marker-end="url(#a1)"/>
+  <rect x="260" y="140" width="140" height="90" rx="6" fill="#070b14" stroke="#38bdf8" stroke-width="2"/>
+  <text x="330" y="165" font-family="monospace" font-size="11" fill="#38bdf8" text-anchor="middle">COA</text>
+  <text x="330" y="185" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Dynamic Test Suite</text>
+  <text x="330" y="205" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Reprioritization</text>
+  <line x1="400" y1="185" x2="440" y2="185" stroke="#38bdf8" stroke-width="2" marker-end="url(#a2)"/>
+  <rect x="440" y="140" width="140" height="90" rx="6" fill="#070b14" stroke="#818cf8" stroke-width="2"/>
+  <text x="510" y="165" font-family="monospace" font-size="11" fill="#818cf8" text-anchor="middle">RCA</text>
+  <text x="510" y="185" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Release Policy</text>
+  <text x="510" y="205" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Go/No-Go Gate</text>
+  <line x1="580" y1="185" x2="620" y2="185" stroke="#818cf8" stroke-width="2" marker-end="url(#a3)"/>
+  <rect x="620" y="140" width="140" height="90" rx="6" fill="#070b14" stroke="#fbbf24" stroke-width="2"/>
+  <text x="690" y="165" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">DCA</text>
+  <text x="690" y="185" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Canary Monitoring</text>
+  <text x="690" y="205" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Blast Radius Alert</text>
+  <!-- Feedback Loop -->
+  <path d="M690 185 Q 580 280 400 280 Q 220 280 150 185" stroke="#a855f7" stroke-width="2" stroke-dasharray="8,4" fill="none" marker-end="url(#a4)"/>
+  <text x="400" y="300" font-family="monospace" font-size="10" fill="#a855f7" text-anchor="middle">AFP Feedback Loop: Production Incidents → Upstream Risk Scores</text>
+  <rect x="300" y="350" width="200" height="80" rx="6" fill="#070b14" stroke="#a855f7" stroke-width="2"/>
+  <text x="400" y="375" font-family="monospace" font-size="11" fill="#a855f7" text-anchor="middle">IRA</text>
+  <text x="400" y="395" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Incident Response</text>
+  <text x="400" y="415" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Root Cause Attribution</text>
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#34d399"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#38bdf8"/></marker>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#818cf8"/></marker>
+    <marker id="a4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#a855f7"/></marker>
+  </defs>
+</svg>

@@ -10,7 +10,13 @@ export const Projects: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('All');
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
-  const categories = ['All', 'AI & Multi-Agent', 'Enterprise ERP', 'Optimization Platforms'];
+  const categories = [
+    'All',
+    'AI & Multi-Agent',
+    'Enterprise ERP',
+    'Optimization Platforms',
+    'AI Systems & Platforms'
+  ];
 
   const filteredProjects = projectsData.filter((p) => {
     if (selectedFilter === 'All') return true;
@@ -20,30 +26,30 @@ export const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-20 border-t border-slate-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        {/* Section Header - refined */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <Badge variant="cyan" size="sm" icon={<Icons.Layers className="w-3.5 h-3.5" />}>
               Architecture & Systems
             </Badge>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-snug">
               Featured Software Projects
             </h2>
-            <p className="mt-2 text-base text-slate-400 max-w-2xl">
+            <p className="mt-3 text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed">
               Real engineering prototypes, multi-agent frameworks, and business ERP systems with clear separation of implemented versus planned features.
             </p>
           </div>
 
-          {/* Filter Pills */}
+          {/* Filter Pills - improved */}
           <div className="flex flex-wrap gap-2">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedFilter(cat)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 ${
                   selectedFilter === cat
                     ? 'bg-sky-500 text-slate-950 font-semibold shadow-md shadow-sky-500/20'
-                    : 'bg-slate-900 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700'
+                    : 'bg-slate-900/80 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 hover:bg-slate-900'
                 }`}
               >
                 {cat}
@@ -52,8 +58,8 @@ export const Projects: React.FC = () => {
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Projects Grid - improved spacing */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
