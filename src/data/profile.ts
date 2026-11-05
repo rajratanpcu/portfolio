@@ -4,6 +4,7 @@ export const profileData: Profile = {
   name: 'Raj Ratan',
   pronouns: 'He/Him',
   headline: 'Computer Science Undergraduate & Java Backend Developer',
+  avatar: '/avatar-fallback.svg',
   subtitles: [
     'B.Tech CSE (2025–2029) @ PCU Pune',
     'Java & Spring Boot Backend Systems',

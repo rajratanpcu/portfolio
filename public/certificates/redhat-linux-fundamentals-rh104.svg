@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="redhat-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1e1e" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="redhat-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EE0000" />
+      <stop offset="100%" stop-color="#CC0000" />
+    </linearGradient>
+    <linearGradient id="shadow-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.3)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="12" fill="url(#redhat-bg)" />
+  <rect width="800" height="500" rx="12" fill="none" stroke="url(#redhat-accent)" stroke-width="2" opacity="0.3" />
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="800" height="6" rx="12" fill="url(#redhat-accent)" />
+
+  <!-- Red Hat Logo Area -->
+  <g transform="translate(60, 60)">
+    <!-- Red Hat Shadowman Logo (simplified) -->
+    <circle cx="45" cy="45" r="40" fill="#1a1a1a" stroke="url(#redhat-accent)" stroke-width="2" />
+    <path d="M25,45 Q45,20 65,45 Q45,70 25,45" fill="#EE0000" opacity="0.9" />
+    <ellipse cx="45" cy="38" rx="12" ry="8" fill="#EE0000" />
+    <ellipse cx="35" cy="35" rx="3" ry="4" fill="#1a1a1a" />
+    <ellipse cx="55" cy="35" rx="3" ry="4" fill="#1a1a1a" />
+    <path d="M30,55 Q45,50 60,55" stroke="#1a1a1a" stroke-width="3" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Certificate Title -->
+  <text x="60" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="-0.5">
+    Red Hat Training
+  </text>
+
+  <!-- Course Title -->
+  <text x="60" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="600" fill="#EE0000">
+    Getting Started with Linux Fundamentals
+  </text>
+
+  <!-- Course Code -->
+  <text x="60" y="245" font-family="ui-monospace, monospace" font-size="16" font-weight="500" fill="#888888">
+    RH104 - RHA • Version 9.1
+  </text>
+
+  <!-- Divider -->
+  <line x1="60" y1="260" x2="740" y2="260" stroke="#333333" stroke-width="1" />
+
+  <!-- Details Grid -->
+  <g font-family="ui-monospace, monospace" font-size="14" fill="#cccccc">
+    <text x="60" y="295" fill="#888888">ISSUED:</text>
+    <text x="200" y="295" fill="#ffffff">October 2026</text>
+
+    <text x="60" y="325" fill="#888888">DURATION:</text>
+    <text x="200" y="325" fill="#ffffff">16 hours</text>
+
+    <text x="60" y="355" fill="#888888">CREDENTIAL ID:</text>
+    <text x="200" y="355" fill="#EE0000" font-size="12">7c5bb9c3-37a5-462b-a454-fd5e67d97c60</text>
+
+    <text x="60" y="385" fill="#888888">ISSUER:</text>
+    <text x="200" y="385" fill="#ffffff">Red Hat</text>
+  </g>
+
+  <!-- Verification Badge -->
+  <g transform="translate(60, 410)">
+    <rect width="280" height="50" rx="6" fill="#1a1a1a" stroke="#333333" />
+    <text x="140" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#EE0000" text-anchor="middle">VERIFIED ON CREDLY</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#555555" text-anchor="middle">
+    This is a preview representation. View the official credential at credly.com
+  </text>
+</svg>

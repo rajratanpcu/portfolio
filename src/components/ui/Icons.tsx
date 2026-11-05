@@ -178,6 +178,25 @@ export const Icons = {
       <path d="M15 14c.2-1 .7-1.7 2.1-2.1" /><path d="M21 12c0 2.7-2.3 5-5 5" /><path d="M3 12c0 2.7 2.3 5 5 5" /><path d="M9 17c2 0 4-1.5 4-2.5" /><path d="M15 6.5c0-2.5-2-3-3-3" /><path d="M12 2c0 1.5.5 3 2 3.5" /><path d="M9 6.5c0-2.5 2-3 3-3" /><path d="M12 2c0 1.5-.5 3-2 3.5" />
     </svg>
   ),
+  AlertTriangle: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+      <line x1="12" x2="12" y1="9" y2="13" />
+      <line x1="12" x2="12.01" y1="17" y2="17" />
+    </svg>
+  ),
+  ChevronLeft: ({ className = 'w-4 h-4', size = 16, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <path d="m15 18-6-6 6-6" />
+    </svg>
+  ),
+  HelpCircle: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+      <line x1="12" x2="12.01" y1="17" y2="17" />
+    </svg>
+  ),
   Link: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
       <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
@@ -206,6 +225,60 @@ export const Icons = {
   Image: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
       <rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" />
+    </svg>
+  ),
+  Python: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <path d="M14 3c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4" />
+      <path d="M10 15h4" />
+      <path d="M12 3v18" />
+      <path d="M18 15h-4" />
+      <path d="M6 15h4" />
+    </svg>
+  ),
+  Css: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8.5L15 2z" />
+      <path d="M12 17h.01" />
+      <path d="M12 12h.01" />
+      <path d="M12 7h.01" />
+    </svg>
+  ),
+  Javascript: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <path d="M18 16l4-4-4-4" />
+      <path d="M6 8l-4 4 4 4" />
+      <path d="M10 12h4" />
+      <path d="M6 12h2" />
+      <path d="M16 12h2" />
+    </svg>
+  ),
+  Ollama: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+    </svg>
+  ),
+  Mistral: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+      <path d="M2 17l10 5 10-5" />
+      <path d="M2 12l10 5 10-5" />
+    </svg>
+  ),
+  Qdrant: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 6v12M6 12h12" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="12" cy="12" r="2" />
+    </svg>
+  ),
+  Kubernetes: ({ className = 'w-5 h-5', size = 20, ...props }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+      <line x1="12" y1="22.08" x2="12" y2="12" />
     </svg>
   ),
   AlertCircle: ({ className = 'w-4 h-4', size = 16, ...props }: IconProps) => (

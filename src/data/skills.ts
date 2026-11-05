@@ -3,38 +3,38 @@ import { Skill, SkillCategory } from '../types';
 export const skillCategories: SkillCategory[] = [
   {
     id: 'languages',
-    name: 'Languages & Core CS',
+    name: 'Programming Languages',
     description: 'Core languages and foundational CS principles for backend engineering.',
     icon: 'code',
   },
   {
     id: 'backend',
-    name: 'Backend & Web',
-    description: 'Server frameworks, security tokens, and responsive web design.',
+    name: 'Backend Development',
+    description: 'Server frameworks, security tokens, APIs, and data layer technologies.',
     icon: 'server',
   },
   {
-    id: 'databases',
-    name: 'Databases & Storage',
-    description: 'Relational data modeling, querying, and transactional integrity.',
-    icon: 'database',
-  },
-  {
-    id: 'tools-devops',
-    name: 'Tools & DevOps',
-    description: 'Containerization, cloud persistence, and version control.',
-    icon: 'terminal',
+    id: 'frontend',
+    name: 'Frontend Development',
+    description: 'Modern web markup, styling, and interactive client-side technologies.',
+    icon: 'layout',
   },
   {
     id: 'ai-automation',
     name: 'AI & Automation',
-    description: 'Applied Generative AI, RAG pipelines, n8n, and agentic coding toolchains.',
+    description: 'Applied Generative AI, RAG pipelines, vector databases, and workflow orchestration.',
     icon: 'sparkles',
+  },
+  {
+    id: 'devops-tools',
+    name: 'DevOps & Tools',
+    description: 'Containerization, orchestration, version control, and developer tooling.',
+    icon: 'terminal',
   },
 ];
 
 export const skillsData: Skill[] = [
-  // Languages & Core CS
+  // Programming Languages
   {
     name: 'Java',
     category: 'languages',
@@ -42,6 +42,14 @@ export const skillsData: Skill[] = [
     icon: 'java',
     description: 'Primary backend language; Object-Oriented design, collections, multi-threading, Spring Boot integration.',
     tags: ['Backend', 'Enterprise', 'OOP', 'Spring'],
+  },
+  {
+    name: 'Python',
+    category: 'languages',
+    proficiency: 'Core',
+    icon: 'python',
+    description: 'Scripting, data processing, AI/ML prototyping, and backend service development.',
+    tags: ['Scripting', 'AI/ML', 'Automation'],
   },
   {
     name: 'C',
@@ -84,7 +92,7 @@ export const skillsData: Skill[] = [
     tags: ['Relational Data', 'Transactions'],
   },
 
-  // Backend & Web
+  // Backend Development
   {
     name: 'Spring Boot',
     category: 'backend',
@@ -92,14 +100,6 @@ export const skillsData: Skill[] = [
     icon: 'spring',
     description: 'REST controller architecture, dependency injection, JPA repository mapping, service layer design.',
     tags: ['Java', 'Microservices', 'REST APIs'],
-  },
-  {
-    name: 'JWT (JSON Web Token) Auth',
-    category: 'backend',
-    proficiency: 'Core',
-    icon: 'jwt',
-    description: 'Stateless user authentication, token generation, cryptographic verification, and security filters.',
-    tags: ['Security', 'Authentication', 'APIs'],
   },
   {
     name: 'RESTful APIs',
@@ -110,64 +110,45 @@ export const skillsData: Skill[] = [
     tags: ['HTTP', 'Contracts', 'Integration'],
   },
   {
-    name: 'HTML5 & CSS3',
+    name: 'JWT (JSON Web Token) Auth',
     category: 'backend',
-    proficiency: 'Comfortable',
-    icon: 'html',
-    description: 'Responsive layouts, modern web styling, UI markup, accessibility.',
-    tags: ['Web Standards', 'Styling'],
+    proficiency: 'Core',
+    icon: 'jwt',
+    description: 'Stateless user authentication, token generation, cryptographic verification, and security filters.',
+    tags: ['Security', 'Authentication', 'APIs'],
   },
-
-  // Databases
   {
     name: 'MySQL',
-    category: 'databases',
+    category: 'backend',
     proficiency: 'Core',
     icon: 'mysql',
     description: 'Relational schemas, query optimization, foreign key constraints, indexing, transactions.',
     tags: ['RDBMS', 'SQL', 'Production'],
   },
+  // Frontend Development
   {
-    name: 'PostgreSQL',
-    category: 'databases',
-    proficiency: 'Comfortable',
-    icon: 'postgresql',
-    description: 'Complex joins, relational schema design, enterprise migrations, and ACID compliance.',
-    tags: ['RDBMS', 'SQL'],
-  },
-
-  // Tools & DevOps
-  {
-    name: 'Git & GitHub',
-    category: 'tools-devops',
+    name: 'HTML5',
+    category: 'frontend',
     proficiency: 'Core',
-    icon: 'github',
-    description: 'Branching workflows, commits, pull requests, issue tracking, and collaborative open source.',
-    tags: ['VCS', 'Collaboration'],
+    icon: 'html',
+    description: 'Semantic markup, accessibility standards, SEO-friendly structure, modern web standards.',
+    tags: ['Web Standards', 'Accessibility'],
   },
   {
-    name: 'Docker',
-    category: 'tools-devops',
-    proficiency: 'Comfortable',
-    icon: 'docker',
-    description: 'Containerization, Dockerfile authoring, multi-container Compose setup, isolated runtimes.',
-    tags: ['Containers', 'DevOps', 'Deployment'],
-  },
-  {
-    name: 'Firebase',
-    category: 'tools-devops',
-    proficiency: 'Comfortable',
-    icon: 'firebase',
-    description: 'Backend-as-a-service, real-time database, cloud hosting, and authentication hooks.',
-    tags: ['BaaS', 'Cloud'],
-  },
-  {
-    name: 'VS Code',
-    category: 'tools-devops',
+    name: 'CSS3',
+    category: 'frontend',
     proficiency: 'Core',
-    icon: 'vscode',
-    description: 'Configured development environment with Java language support, debugging, and extensions.',
-    tags: ['IDE', 'Productivity'],
+    icon: 'css',
+    description: 'Responsive layouts, modern styling (Flexbox, Grid), animations, custom properties, design systems.',
+    tags: ['Styling', 'Responsive', 'Design Systems'],
+  },
+  {
+    name: 'JavaScript / TypeScript',
+    category: 'frontend',
+    proficiency: 'Comfortable',
+    icon: 'javascript',
+    description: 'DOM manipulation, ES6+ features, type-safe development, component architecture, async patterns.',
+    tags: ['Web Apps', 'Type Safety', 'Async'],
   },
 
   // AI & Automation
@@ -188,20 +169,28 @@ export const skillsData: Skill[] = [
     tags: ['Information Retrieval', 'Embeddings'],
   },
   {
-    name: 'AI Chatbots',
+    name: 'Ollama',
     category: 'ai-automation',
-    proficiency: 'Core',
-    icon: 'chatbot',
-    description: 'Conversational agent architecture, state management, tool-calling loops, and API connections.',
-    tags: ['Conversational AI', 'Agents'],
+    proficiency: 'Comfortable',
+    icon: 'ollama',
+    description: 'Local LLM inference, model management, custom model deployment, offline AI development.',
+    tags: ['Local LLM', 'Inference', 'Privacy'],
   },
   {
-    name: 'Vibe Coding',
+    name: 'Mistral',
     category: 'ai-automation',
-    proficiency: 'Core',
-    icon: 'sparkles',
-    description: 'Iterative, AI-augmented rapid prototyping and production code synthesis.',
-    tags: ['AI Tooling', 'Speed'],
+    proficiency: 'Comfortable',
+    icon: 'mistral',
+    description: 'Open-weight LLM family, fine-tuning, instruction following, efficient inference.',
+    tags: ['Open Models', 'Fine-tuning'],
+  },
+  {
+    name: 'Qdrant',
+    category: 'ai-automation',
+    proficiency: 'Comfortable',
+    icon: 'qdrant',
+    description: 'Vector database for similarity search, filtering, payload indexing, and hybrid retrieval.',
+    tags: ['Vector DB', 'Semantic Search', 'RAG'],
   },
   {
     name: 'n8n',
@@ -211,12 +200,38 @@ export const skillsData: Skill[] = [
     description: 'Self-hosted workflow automation, webhook endpoints, multi-step business logic triggers.',
     tags: ['Automation', 'Workflows', 'Low-Code'],
   },
+
+  // DevOps & Tools
   {
-    name: 'Claude Code',
-    category: 'ai-automation',
+    name: 'Docker',
+    category: 'devops-tools',
+    proficiency: 'Comfortable',
+    icon: 'docker',
+    description: 'Containerization, Dockerfile authoring, multi-container Compose setup, isolated runtimes.',
+    tags: ['Containers', 'DevOps', 'Deployment'],
+  },
+  {
+    name: 'Kubernetes',
+    category: 'devops-tools',
+    proficiency: 'Exploring',
+    icon: 'kubernetes',
+    description: 'Container orchestration, pod management, service discovery, scaling strategies, Helm charts.',
+    tags: ['Orchestration', 'Cloud Native', 'Scaling'],
+  },
+  {
+    name: 'Git & GitHub',
+    category: 'devops-tools',
     proficiency: 'Core',
-    icon: 'claude',
-    description: 'Advanced command-line agentic developer workflows, test automation, and code refactoring.',
-    tags: ['Agentic Workflows', 'Developer Tools'],
+    icon: 'github',
+    description: 'Branching workflows, commits, pull requests, issue tracking, and collaborative open source.',
+    tags: ['VCS', 'Collaboration'],
+  },
+  {
+    name: 'VS Code',
+    category: 'devops-tools',
+    proficiency: 'Core',
+    icon: 'vscode',
+    description: 'Configured development environment with Java language support, debugging, and extensions.',
+    tags: ['IDE', 'Productivity'],
   },
 ];

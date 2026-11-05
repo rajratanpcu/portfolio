@@ -24,8 +24,8 @@ export const Badge: React.FC<BadgeProps> = ({
   };
 
   const sizeStyles: Record<string, string> = {
-    sm: 'text-xs px-2.5 py-0.5 rounded-full font-medium',
-    md: 'text-xs sm:text-sm px-3 py-1 rounded-full font-medium',
+    sm: 'text-xs px-2.5 py-0.5 rounded-md font-medium',
+    md: 'text-xs sm:text-sm px-3 py-1 rounded-md font-medium',
   };
 
   const selectedVariant = variantStyles[variant] || variantStyles.neutral;

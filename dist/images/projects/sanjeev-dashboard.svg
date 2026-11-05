@@ -1,0 +1,17 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0e1526"/>
+  <rect x="50" y="50" width="700" height="500" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="400" y="100" font-family="monospace" font-size="16" fill="#818cf8" text-anchor="middle">SANJEEV Rural Business Companion</text>
+  <rect x="80" y="120" width="200" height="120" rx="4" fill="#070b14" stroke="#1e293b"/>
+  <text x="180" y="155" font-family="monospace" font-size="12" fill="#38bdf8" text-anchor="middle">Market Analysis</text>
+  <text x="180" y="180" font-family="monospace" font-size="12" fill="#34d399" text-anchor="middle">5 viable sectors</text>
+  <rect x="300" y="120" width="200" height="120" rx="4" fill="#070b14" stroke="#1e293b"/>
+  <text x="400" y="155" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">Capital Estimation</text>
+  <text x="400" y="180" font-family="monospace" font-size="12" fill="#818cf8" text-anchor="middle">₹2.4L startup</text>
+  <rect x="520" y="120" width="200" height="120" rx="4" fill="#070b14" stroke="#1e293b"/>
+  <text x="620" y="155" font-family="monospace" font-size="12" fill="#34d399" text-anchor="middle">Govt Schemes</text>
+  <text x="620" y="180" font-family="monospace" font-size="12" fill="#38bdf8" text-anchor="middle">12 matches</text>
+  <rect x="80" y="260" width="640" height="260" rx="4" fill="#070b14" stroke="#1e293b"/>
+  <text x="400" y="290" font-family="monospace" font-size="14" fill="#94a3b8" text-anchor="middle">Multilingual Interface</text>
+  <text x="400" y="380" font-family="monospace" font-size="12" fill="#64748b" text-anchor="middle">[Hindi/Marathi/Bengali UI with voice input support]</text>
+</svg>

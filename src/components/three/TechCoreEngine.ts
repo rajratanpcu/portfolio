@@ -30,6 +30,16 @@ export class TechCoreEngine {
   private vertices: Point3D[] = [];
   private edges: [number, number][] = [];
   private orbitalPackets: { ringIndex: number; angle: number; speed: number; size: number }[] = [];
+  private readonly handlePointerMove = (e: MouseEvent) => {
+    const rect = this.canvas.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    this.mouseX = x;
+    this.mouseY = y;
+    this.targetRotY = x * 0.8;
+    this.targetRotX = -y * 0.6;
+  };
 
   constructor(options: TechCoreEngineOptions) {
     this.canvas = options.canvas;
@@ -99,17 +109,7 @@ export class TechCoreEngine {
   private setupListeners() {
     window.addEventListener('resize', this.handleResize);
 
-    const onPointerMove = (e: MouseEvent) => {
-      const rect = this.canvas.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      this.mouseX = x;
-      this.mouseY = y;
-      this.targetRotY = x * 0.8;
-      this.targetRotX = -y * 0.6;
-    };
-
-    window.addEventListener('mousemove', onPointerMove, { passive: true });
+    window.addEventListener('mousemove', this.handlePointerMove, { passive: true });
   }
 
   private handleResize = () => {
@@ -122,6 +122,7 @@ export class TechCoreEngine {
     this.canvas.width = w * dpr;
     this.canvas.height = h * dpr;
     if (this.ctx) {
+      this.ctx.setTransform(1, 0, 0, 1, 0, 0);
       this.ctx.scale(dpr, dpr);
     }
     this.sphereRadius = Math.min(w, h) * 0.28;
@@ -287,5 +288,6 @@ export class TechCoreEngine {
       cancelAnimationFrame(this.animationFrameId);
     }
     window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('mousemove', this.handlePointerMove);
   }
 }

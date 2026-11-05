@@ -2,6 +2,7 @@ export interface Profile {
   name: string;
   pronouns: string;
   headline: string;
+  avatar: string;
   subtitles: string[];
   bio: string[];
   education: {
@@ -60,6 +61,32 @@ export interface AgentSpec {
   responsibility: string;
 }
 
+export interface ChallengeSolution {
+  challenge: string;
+  solution: string;
+  technicalDetail?: string;
+}
+
+export interface ArchitectureDiagram {
+  type: 'mermaid' | 'svg' | 'component';
+  content: string;
+  title: string;
+  description?: string;
+}
+
+export interface ImplementationBreakdown {
+  area: string;
+  description: string;
+  files?: string[];
+  complexity?: 'Low' | 'Medium' | 'High';
+}
+
+export interface ProjectAccentColors {
+  primary: string;
+  secondary: string;
+  gradient?: string;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -98,6 +125,17 @@ export interface Project {
   screenshots?: string[];
   keyLearnings: string[];
   futureRoadmap: string[];
+
+  // Enhanced case study fields
+  accentColors?: ProjectAccentColors;
+  architectureDiagrams?: ArchitectureDiagram[];
+  challengesSolutions?: ChallengeSolution[];
+  implementationBreakdown?: ImplementationBreakdown[];
+  screenshotGallery?: {
+    url: string;
+    caption: string;
+    thumbnail?: string;
+  }[];
 }
 
 export interface ExperienceItem {
@@ -124,6 +162,8 @@ export interface Certification {
   skills: string[];
   summary: string;
   verified: boolean;
+  trainingDuration?: string;
+  linkedinUrl?: string;
 }
 
 export interface Achievement {

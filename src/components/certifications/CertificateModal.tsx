@@ -11,6 +11,46 @@ interface CertificateModalProps {
   onClose: () => void;
 }
 
+const getIssuerLogo = (issuer: string): React.ReactNode => {
+  switch (issuer.toLowerCase()) {
+    case 'oracle':
+      return (
+        <svg className="w-8 h-8 text-amber-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+        </svg>
+      );
+    case 'red hat':
+    case 'redhat':
+      return (
+        <svg className="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.52 14H6.48c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5h11.04c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5zm0-4H6.48c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5h11.04c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z"/>
+        </svg>
+      );
+    case 'coursera':
+      return (
+        <svg className="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.5 14.5c-1.4 0-2.5-.9-2.5-2s1.1-2 2.5-2 2.5.9 2.5 2-1.1 2-2.5 2zm-9 0c-1.4 0-2.5-.9-2.5-2s1.1-2 2.5-2 2.5.9 2.5 2-1.1 2-2.5 2z"/>
+        </svg>
+      );
+    default:
+      return <Icons.Award className="w-7 h-7 text-sky-400" />;
+  }
+};
+
+const getVerificationButtonText = (issuer: string): string => {
+  switch (issuer.toLowerCase()) {
+    case 'oracle':
+      return 'Verify on Oracle';
+    case 'red hat':
+    case 'redhat':
+      return 'Verify on Credly';
+    case 'coursera':
+      return 'Verify on Coursera';
+    default:
+      return 'Verify Credential';
+  }
+};
+
 export const CertificateModal: React.FC<CertificateModalProps> = ({
   certification,
   isOpen,
@@ -33,7 +73,18 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
             src={certification.documentPath}
             alt={`${certification.title} Credential Certificate`}
             className="w-full h-auto rounded-lg"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            }}
           />
+          <div className="hidden flex items-center justify-center h-64 bg-slate-900 text-slate-500 text-center p-4">
+            <div>
+              <Icons.FileText className="w-16 h-16 mx-auto mb-4 text-slate-600" />
+              <p className="text-sm">Certificate Preview</p>
+              <p className="text-xs text-slate-500">Image unavailable</p>
+            </div>
+          </div>
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
         </div>
 
@@ -41,27 +92,54 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
         <div className="p-5 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-2">
-              <Badge variant="emerald" icon={<Icons.CheckCircle className="w-3.5 h-3.5" />}>
-                Verified Credential
-              </Badge>
-              <span className="text-xs font-mono text-slate-400/80">
-                Issued: {certification.issueDate}
-              </span>
+              {getIssuerLogo(certification.issuer)}
+              <div className="flex items-center gap-2">
+                <Badge variant="emerald" icon={<Icons.CheckCircle className="w-3.5 h-3.5" />}>
+                  Verified Credential
+                </Badge>
+                <span className="text-xs font-mono text-slate-400/80">
+                  Issued: {certification.issueDate}
+                </span>
+              </div>
             </div>
 
-            {certification.verificationUrl && (
-              <Button
-                asLink
-                href={certification.verificationUrl}
-                target="_blank"
-                variant="primary"
-                size="sm"
-                icon={<Icons.ExternalLink className="w-3.5 h-3.5" />}
-              >
-                Verify on Oracle
-              </Button>
-            )}
+            <div className="flex items-center gap-2">
+              {certification.verificationUrl && (
+                <Button
+                  asLink
+                  href={certification.verificationUrl}
+                  target="_blank"
+                  variant="primary"
+                  size="sm"
+                  icon={<Icons.ExternalLink className="w-3.5 h-3.5" />}
+                >
+                  {getVerificationButtonText(certification.issuer)}
+                </Button>
+              )}
+              {certification.linkedinUrl && (
+                <Button
+                  asLink
+                  href={certification.linkedinUrl}
+                  target="_blank"
+                  variant="secondary"
+                  size="sm"
+                  icon={<Icons.Linkedin className="w-3.5 h-3.5" />}
+                >
+                  View on LinkedIn
+                </Button>
+              )}
+            </div>
           </div>
+
+          {certification.trainingDuration && (
+            <div className="p-3 rounded-lg bg-slate-900/80 border border-slate-800/60 flex items-center gap-2">
+              <Icons.Clock className="w-4 h-4 text-amber-400" />
+              <span className="text-sm text-slate-300">
+                <span className="font-semibold text-slate-100">Training Duration: </span>
+                {certification.trainingDuration}
+              </span>
+            </div>
+          )}
 
           {certification.credentialId && (
             <div className="p-3 rounded-lg bg-slate-900/80 border border-slate-800/60">
